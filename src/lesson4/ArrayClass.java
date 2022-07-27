@@ -29,25 +29,25 @@ public class ArrayClass {
 //  об этом.
 
         int[] array2 = new int[] {6, 5, 4, 10, 8, 7, 9, 1};
-        int[] resultarray;
+        int[] resultArray;
         System.out.println(Arrays.toString(array2));
-        Scanner scanner2 = new Scanner(System.in);
         System.out.println("Введите число");
-        int number2 = scanner2.nextInt();
+        int number2 = scanner.nextInt();
         for (int i = 0; i < array2.length; i++) {
             if (array2[i] == number2) {
-                resultarray = new int[array2.length - 1];
+                resultArray = new int[array2.length - 1];
                 for (int index = 0; index < i; index++) {
-                    resultarray[index] = array2[index];
+                    resultArray[index] = array2[index];
                 }
                 for (int j = i; j < array2.length - 1; j++) {
-                    resultarray[j] = array2[j+1];
+                    resultArray[j] = array2[j+1];
                 }
-                System.out.println(Arrays.toString(resultarray));
+                System.out.println(Arrays.toString(resultArray));
                 break;
 
-            } else if (i == array2.length - 1)
-            System.out.println("Заданного числа нет в массиве");
+            } else if (i == array2.length - 1) {
+                System.out.println("Заданного числа нет в массиве");
+            }
         }
 
 

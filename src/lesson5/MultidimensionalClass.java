@@ -37,7 +37,9 @@ public class MultidimensionalClass {
             for (int j = 0; j < array2[i].length; j++) {
              if ((i+j) % 2 == 1){
                  array2[i][j] = "B";
-             } else array2[i][j] = "W";
+             } else {
+                 array2[i][j] = "W";
+             }
              System.out.print(array2[i][j] + " ");
 
           }
