@@ -18,7 +18,7 @@ public class ArrayClass {
             if (number == i && number != 0) {
                System.out.println("Заданное число входит в массив");
                break;
-          } else if (i == array1.length -1) {
+            } else if (i == array1.length -1) {
                 System.out.println("Заданного числа нет в массиве");
             }
         }
@@ -28,20 +28,28 @@ public class ArrayClass {
 //  Создайте массив целых чисел. Удалите все вхождения заданного числа из массива. Пусть число задается с консоли (класс Scanner). Если такого числа нет – выведите сообщение
 //  об этом.
 
-        int[] array2 = new int[] {4, 5, 9, 12, 4, 7, 4, 2};
+        int[] array2 = new int[] {6, 5, 4, 10, 8, 7, 9, 1};
+        int[] resultarray;
         System.out.println(Arrays.toString(array2));
         Scanner scanner2 = new Scanner(System.in);
         System.out.println("Введите число");
         int number2 = scanner2.nextInt();
         for (int i = 0; i < array2.length; i++) {
-            if (array2[i] == number2){
-                array2[i] *= 0;
+            if (array2[i] == number2) {
+                resultarray = new int[array2.length - 1];
+                for (int index = 0; index < i; index++) {
+                    resultarray[index] = array2[index];
+                }
+                for (int j = i; j < array2.length - 1; j++) {
+                    resultarray[j] = array2[j+1];
+                }
+                System.out.println(Arrays.toString(resultarray));
                 break;
-            } else if (i == array2.length -1) {
-            System.out.println("Заданного числа нет в массиве"); }
+
+            } else if (i == array2.length - 1)
+            System.out.println("Заданного числа нет в массиве");
         }
 
-        System.out.println(Arrays.toString(array2));
 
 
 //  Создайте и заполните массив случайными числами и выведите минимальное, максимальное и среднее значение. Для генерации случайного числа используйте метод Math.random().
@@ -87,8 +95,12 @@ public class ArrayClass {
         System.out.println("Среднее второго массива: " + average5);
         if (average4 > average5) {
             System.out.println(average4 + " > " + average5);
-        } else System.out.println(average4 + " < " + average5);
-        if (average4 == average5) System.out.println(average4 + " = " + average5);
+        } else {
+            System.out.println(average4 + " < " + average5);
+        }
+        if (average4 == average5) {
+            System.out.println(average4 + " = " + average5);
+        }
 
     }
 }
