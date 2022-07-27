@@ -3,7 +3,7 @@ package lesson5;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class MultidimensionalClass {
+public class DimensionalArray {
     public static void main(String[] args) {
 
 //    Создайте трехмерный массив из целых чисел. С помощью циклов «пройти» по всему массиву и увеличить каждый элемент на заданное число.
@@ -35,14 +35,16 @@ public class MultidimensionalClass {
         for (int i = 0; i < array2.length; i++) {
             System.out.println();
             for (int j = 0; j < array2[i].length; j++) {
-             if ((i+j) % 2 == 1){
-                 array2[i][j] = "B";
-             } else {
-                 array2[i][j] = "W";
-             }
-             System.out.print(array2[i][j] + " ");
+                if ((i+j) % 2 == 1){
+                    array2[i][j] = "B";
+                } else {
+                    array2[i][j] = "W";
+                }
+                System.out.print(array2[i][j] + " ");
 
-          }
+            }
         }
     }
 }
+
+
